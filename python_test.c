@@ -33,13 +33,13 @@ int main(void){
 	char buffer[10];
 	unsigned int value = 0;
 
-  // USART0 초기화, 9600bps 보율 설정 (UBRR0 = 103)
+  	// USART0 초기화, 9600bps 보율 설정 (UBRR0 = 103)
 	usart0_init(103);
 	
 	while (1) {
 		//파이썬으로 전송할 문자열 설정
 		sprintf(buffer, sizeof(buffer), "%d\n", value);
-    //전송
+   		 //전송
 		tx0_str(buffer);
 		value++;
 		_delay_ms(1000);
